@@ -53,12 +53,12 @@ int main(int argc, char *argv[]) {
     for (int i = 1; i <= 3; ++i) {
         for (int j = 0; j < i; ++j) {
             du = -a[i][j]/a[j][j];
-            cout << i << j <<" " ;
             for (int k = 0; k < 4; ++k) {
                 a[i][k] += du*a[j][k];
             }
         }
     }
+
 
     double v2 = a[0][0] * a[1][1] * a[2][2] * a[3][3];
     cout << v2 << endl;
