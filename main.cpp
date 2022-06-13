@@ -9,12 +9,7 @@ using namespace std;
 
 int main(int argc, char *argv[]) {
 
-    double a[][4] = {
-            {1,24,0,1},
-            {2,3,10,10},
-            {10,34,5,18},
-            {5,10,15,40}
-    };
+
 
 //    double du = -a[1][0]/a[0][0];
 //    double du;
@@ -49,6 +44,13 @@ int main(int argc, char *argv[]) {
 
 
 
+
+    double a[][4] = {
+            {1,24,0,1},
+            {2,3,10,10},
+            {10,34,5,18},
+            {5,10,15,40}
+    };
     double du;
     for (int i = 1; i <= 3; ++i) {
         for (int j = 0; j < i; ++j) {
