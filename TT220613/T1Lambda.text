@@ -1,0 +1,18 @@
+//匿名函数
+int M_i = 10;
+int M_j = 20;
+//-> int 直接指明return类型
+auto a = [](int i,int j)->int {cout << i+j << endl; return i+j;};
+//不写也同上
+auto b = [](int i,int j) {return i+j;};
+//传递当前所在函数的数值
+auto c = [M_i,&M_j](){cout << M_i+M_j << endl; M_j = 30;};
+//
+
+int aa = a(1,2);
+cout << aa <<  endl;
+int bb = b(5,6);
+cout << bb << endl;
+cout << "改前 " << M_j << endl;
+c();
+cout << "改后" <<M_j << endl;
