@@ -1,0 +1,21 @@
+void Sort(int *i,int Size,int TTT){
+//{3,2,4,5};
+int inti =0;
+    for (int j = 0; j < Size-1; ++j) {
+        int Temp = j;
+        for (int k = j+1; k < Size; ++k) {
+            if(i[Temp] <  i[k]){
+                //cout << i[j] <<" " << i[k] << " " << j << " " <<k << endl;
+                Temp = k;
+            }
+        }
+        if(Temp != -1){
+            inti = i[j];
+            i[j] = i[Temp];
+            i[Temp] = inti;
+        }
+    }
+    for (int j = 0; j < Size; ++j) {
+        cout << "jieg " << i[j] << endl;
+    }
+}
