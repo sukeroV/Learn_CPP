@@ -1,0 +1,43 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+void vecV(int i){
+    cout << i << endl;
+}
+
+int main(int argc, char *argv[]) {
+
+    vector<int> vec;
+    vec.reserve(80);
+    vec.push_back(10);
+    vec.push_back(12);
+    vec.push_back(1);
+    vec.push_back(100);
+    cout << "Max " << vec.max_size() << endl;
+    cout << vec.empty() << endl;
+    cout << vec.capacity() << endl;
+    cout << vec.size() << endl << endl;
+    vec.push_back(100);
+    cout << "23: "<<vec.capacity() << endl;
+
+    for_each(vec.crbegin(),vec.crend(), vecV);
+
+    vector<int> V(vec);
+    cout << "V size " << V.capacity() << endl;
+    cout << "vec size " << vec.capacity() << endl;
+    vec.swap(V);
+    cout << "V size-- " << V.capacity() << endl;
+    cout << "Vec size- " << vec.capacity() << " "<< vec[2]  << "------" << endl;
+    for (int i = 0; i < vec.capacity(); ++i) {
+        cout << vec[i] << endl;
+    }
+    cout << vec.front() << "  " << vec.back() << endl;
+    cout << "-----------------------------------------------" << endl;
+    cout << *vec.cbegin() << endl;
+    std::push_heap(vec.begin(), vec.end());
+    vec.~vector();
+    return 0;
+}
