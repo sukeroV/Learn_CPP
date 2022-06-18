@@ -19,6 +19,7 @@ int main(int argc, char *argv[]) {
     cout << c << " " << a << endl;
     int d = fun<int>(10,20);
     cout << d<< endl;
+    cout  << "space TS" << endl;
 
 
     return 0;
