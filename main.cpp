@@ -1,15 +1,15 @@
 //////////////////////////////////////////////////////////
 // Created by hsl on 2022/6/21.
 /*
-·½·¨ËµÃ÷ : ÒÀÀµµ¹×ªÔ­Ôò
+æ–¹æ³•è¯´æ˜ : ä¾èµ–å€’è½¬åŸåˆ™  æµ‹è¯•
 */
 //////////////////////////////////////////////////////////
 #include <iostream>
 using namespace std;
 
 //hsl
-///Ğ¡
-///ºÎ
+///å°
+///ä½•
 class HardDisk{
 public:
     virtual void save(string data) = 0;
@@ -17,11 +17,11 @@ public:
 };
 class XiJie : public HardDisk{
 public:
-    void save(string data){cout << "Ï£½İ´æ´¢Êı¾İ  " << data << endl;}
+    void save(string data){cout << "å¸Œæ·å­˜å‚¨æ•°æ®  " << data << endl;}
 
     string get()override{
-        cout << "Ê¹ÓÃÏ£½İ¶ÁÈ¡Êı¾İ" << endl;
-        return "Êı¾İ";
+        cout << "ä½¿ç”¨å¸Œæ·è¯»å–æ•°æ®" << endl;
+        return "æ•°æ®";
     }
 };
 
@@ -32,7 +32,7 @@ public:
 class IntelCpu : public Cpu{
 public:
     void run()override{
-        cout << "Ê¹ÓÃIntel´¦ÀíÆ÷" <<endl;
+        cout << "ä½¿ç”¨Intelå¤„ç†å™¨" <<endl;
     }
 };
 
@@ -43,7 +43,7 @@ public:
 class KingstonMemory : public Memory{
 public:
     void save()override{
-        cout << "Ê¹ÓÃ½ğÊ¿¶ÙÄÚ´æÌõ" << endl;
+        cout << "ä½¿ç”¨é‡‘å£«é¡¿å†…å­˜æ¡" << endl;
     }
 };
 
@@ -51,9 +51,9 @@ class Computer{
 
 public:
     void run(){
-        cout << "ÔËĞĞ¼ÆËã»ú" << endl;
+        cout << "è¿è¡Œè®¡ç®—æœº" << endl;
         string data = hardDisk->get();
-        cout << "Ï£½İ´æ´¢Êı¾İ  " << data << endl;
+        cout << "å¸Œæ·å­˜å‚¨æ•°æ®  " << data << endl;
         cpu->run();
         memory->save();
     }
