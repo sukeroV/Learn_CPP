@@ -7,7 +7,7 @@
 #include <iostream>
 using namespace std;
 
-
+//hsl
 ///ะก
 ///บฮ
 class HardDisk{
