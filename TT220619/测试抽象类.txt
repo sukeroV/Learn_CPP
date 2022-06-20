@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+class a{
+public:
+    virtual void TS() = 0;
+};
+class b : public a{
+public:
+    void TS(){
+        cout << "B" << endl;
+    }
+};
+class c : public a{
+    void TS(){
+        cout << "C" << endl;
+    }
+};
+int main(){
+    a *a = new b();
+    a->TS();
+    return 0;
+}
