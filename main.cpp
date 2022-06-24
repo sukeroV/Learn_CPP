@@ -42,5 +42,6 @@ int main(int argc, char *argv[]) {
     heimaSafetyDoor->fireProof();
     heimaSafetyDoor->waterProof();
 
+
     return 0;
 }
