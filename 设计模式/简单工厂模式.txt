@@ -34,30 +34,20 @@ public:
 
 class FruitFactory{
 public:
-    virtual AbstractFruit* setType() = 0;
-};
-
-class appleFactory : public FruitFactory{
-public:
-    AbstractFruit* setType() override{
-        return new Apple;
-    }
-};
-class bananaFactory2 : public FruitFactory{
-public:
-    AbstractFruit* setType() override{
-        return new Banana;
+    static  AbstractFruit* CreateFruit(string flag){
+        if(flag == "apple") return new Apple;
+        else if(flag == "banana") return new Banana;
+        else if(flag == "pear") return new Pear;
+        else return nullptr;
     }
 };
 
 
 int main(int argc, char *argv[]) {
-
-    auto applefactory = (new appleFactory())->setType();
-
-    auto bananaFactory = (new bananaFactory2())->setType();
-    if(applefactory != nullptr) applefactory->ShowName();
-    if(bananaFactory != nullptr) bananaFactory->ShowName();
+    int i;
+    auto apple = FruitFactory::CreateFruit("banana");
+    if(apple != nullptr) apple->ShowName();
 
     return 0;
 }
+
